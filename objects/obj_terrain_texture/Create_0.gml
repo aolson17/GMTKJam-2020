@@ -4,7 +4,7 @@ surf_w = 2000
 surf_h = 1500
 
 
-texture = spr_platform_texture
+texture = spr_platform_texture_2
 border = spr_platform_border
 
 border_size = 2
