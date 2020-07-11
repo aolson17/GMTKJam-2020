@@ -8,7 +8,7 @@ enum states{
 }
 
 move_spd = .5
-move_spd_max = 2
+move_spd_max = 2.5
 
 fric = .5
 
@@ -22,7 +22,7 @@ state = states.fall
 
 aim_dir = 0
 
-
+facing = 1
 
 fall_spd_max = 5
 fall_spd = .1

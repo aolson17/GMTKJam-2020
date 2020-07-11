@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "8bd5281d-b279-4a6a-917c-4ff251c5f014",
+            "Value": {
+                "id": "5dea158b-9e67-4b90-9cfe-7047b2dff3a9",
+                "resourcePath": "scripts\\scr_collision_player\\scr_collision_player.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8d49ccb8-18c7-4afd-943f-2cb7d84b26b1",
             "Value": {
                 "id": "b6b813d9-c965-4e76-b79c-9702d5c96145",
@@ -521,6 +529,7 @@
     ],
     "script_order": [
         "2dcf9e45-9d76-4b00-a988-6730f64fde95",
+        "8bd5281d-b279-4a6a-917c-4ff251c5f014",
         "df46a1f9-0441-455d-bee1-e9c4be79f856",
         "37f5c150-ab62-4f1c-a5dd-56f4a5fb4d79",
         "825abe83-4c72-4f0d-8531-0711db944d35",

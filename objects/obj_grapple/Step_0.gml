@@ -31,8 +31,10 @@ if obj_player.state = states.shoot{
 }else if obj_player.state = states.fall{
 	sprite_index = spr_claw_closed
 	
-	if prev_x != x || prev_y != y{
-		image_angle = point_direction(x,y,prev_x,prev_y)
+	if !obj_player.shoot_key_down{
+		if prev_x != x || prev_y != y{
+			image_angle = point_direction(x,y,prev_x,prev_y)
+		}
 	}
 	prev_x = x
 	prev_y = y
