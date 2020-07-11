@@ -58,25 +58,15 @@ if state = states.fall{
 	move_h = right_key-left_key
 	move_v = down_key-up_key
 	
-	var adj_angle = abs(global.grav_dir)%180 // Angle is 0 to 180 instead of 0 to 360
-	
-	var adj_angle_dif = abs(angle_difference(adj_angle,90))
-	
-	var horizontal_power_factor = 1-(adj_angle_dif/90)
-	var vertical_power_factor = 1-horizontal_power_factor
-	
-	if abs(angle_difference(global.grav_dir,270)) <= 45{
+	if abs(angle_difference(global.grav_dir,270)) <= 90{
 		asp += move_h*.05
-		show_debug_message("1 "+string(global.grav_dir))
-	}else if abs(angle_difference(global.grav_dir,180)) <= 45{
-		asp += move_v*.05
-		show_debug_message("2 "+string(global.grav_dir))
-	}else if abs(angle_difference(global.grav_dir,90)) <= 45{
+	}else{
 		asp -= move_h*.05
-		show_debug_message("3 "+string(global.grav_dir))
-	}else if abs(angle_difference(global.grav_dir,0)) <= 45{
+	}
+	if abs(angle_difference(global.grav_dir,0)) <= 90{
 		asp -= move_v*.05
-		show_debug_message("4 "+string(global.grav_dir))
+	}else{
+		asp += move_v*.05
 	}
 	
 	

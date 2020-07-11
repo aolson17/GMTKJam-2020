@@ -31,6 +31,8 @@ if mouse_wheel_up(){
 zoom_width = width * zoom
 zoom_height = height * zoom
 
+//zoom = 20
+
 if shake > 0{
 	shake_offset_x = choose(-1,1)*((irandom(shake)+1)*4)
 	shake_offset_y = choose(-1,1)*((irandom(shake)+1)*4)
