@@ -99,5 +99,5 @@ if update_surf{
 
 draw_surface(terrain_surf,surface_x,surface_y)//terrain_surf
 
-
+draw_text(obj_player.x,obj_player.y,point_distance(obj_player.x,obj_player.y,surface_x+surf_w/2,surface_y+surf_h/2))
 

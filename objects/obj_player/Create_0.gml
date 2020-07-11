@@ -28,6 +28,6 @@ fall_spd_max = 5
 fall_spd = .1
 
 grapple_speed = 10
-grapple_length_max = 180
+grapple_length_max = 200
 grapple_length_min = 15
 grapple_length = 0

@@ -1,7 +1,7 @@
 
 
-surf_w = 2000
-surf_h = 1500
+surf_w = 2500
+surf_h = 2000
 
 
 texture = spr_platform_texture_2

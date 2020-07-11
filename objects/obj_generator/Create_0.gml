@@ -5,14 +5,14 @@ generate_range = 600
 
 
 
-terrain_per_square_pixel = .000008
+terrain_per_square_pixel = .00001
 
+monitor_per_square_pixel = .00001
 
-
-generated_l = -100 // How far in each direction has been generated
-generated_r = 100
-generated_u = -100
-generated_d = 100
+generated_l = -50 // How far in each direction has been generated
+generated_r = 50
+generated_u = -50
+generated_d = 50
 must_generate_l = generated_l // How far in each direction has been in generating range so should be generated
 must_generate_r = generated_r
 must_generate_u = generated_u

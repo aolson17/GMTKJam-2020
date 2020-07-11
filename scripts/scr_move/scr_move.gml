@@ -43,8 +43,8 @@ var adj_angle = abs(global.grav_dir)%180 // Angle is 0 to 180 instead of 0 to 36
 
 var adj_angle_dif = abs(angle_difference(adj_angle,90))
 
-var horizontal_power_factor = 1-(adj_angle_dif/90)
-var vertical_power_factor = 1-horizontal_power_factor
+var horizontal_power_factor = power(1-(adj_angle_dif/90),2)
+var vertical_power_factor = power(1-horizontal_power_factor,2)
 
 /*show_debug_message(global.grav_dir)
 show_debug_message(adj_angle)

@@ -17,6 +17,10 @@ if (obj_player.x-generate_range) < (must_generate_l){
 		repeat(generate_amount){
 			scr_new_terrain(generated_l-cell_size,generated_l,generated_u,generated_d)
 		}
+		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_monitor(generated_l-cell_size,generated_l,generated_u,generated_d)
+		}
 	}
 	
 	
@@ -33,6 +37,10 @@ if (obj_player.x+generate_range) > (must_generate_r){
 		repeat(generate_amount){
 			scr_new_terrain(generated_r,generated_r+cell_size,generated_u,generated_d)
 		}
+		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_monitor(generated_r,generated_r+cell_size,generated_u,generated_d)
+		}
 	}
 }
 
@@ -47,6 +55,10 @@ if (obj_player.y-generate_range) < (must_generate_u){
 		repeat(generate_amount){
 			scr_new_terrain(generated_l,generated_r,generated_u-cell_size,generated_u)
 		}
+		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_monitor(generated_l,generated_r,generated_u-cell_size,generated_u)
+		}
 	}
 }
 
@@ -59,6 +71,10 @@ if (obj_player.y+generate_range) > (must_generate_d){
 		var generate_amount = terrain_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
 		repeat(generate_amount){
 			scr_new_terrain(generated_l,generated_r,generated_d+cell_size,generated_d)
+		}
+		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_monitor(generated_l,generated_r,generated_d+cell_size,generated_d)
 		}
 	}
 }
