@@ -10,7 +10,7 @@ if !surface_exists(border_surf_2){
 }
 if update_surf{
 	update_surf = false
-	
+	show_debug_message(string(random(10))+" Update Surf")
 	
 	surface_set_target(terrain_surf)
 	draw_clear_alpha(c_black,0)
@@ -89,15 +89,8 @@ if update_surf{
 	gpu_set_blendmode(bm_normal)
 	
 	surface_reset_target()
-	
-	
-	
-	
-	
 }
 
 
 draw_surface(terrain_surf,surface_x,surface_y)//terrain_surf
-
-draw_text(obj_player.x,obj_player.y,point_distance(obj_player.x,obj_player.y,surface_x+surf_w/2,surface_y+surf_h/2))
 

@@ -3,7 +3,6 @@
 if room = rm_menu{
 	game_end()
 }else{
-	game_end()
-	//var transition = instance_create_layer(x,y,"Instances",obj_transition)
-	//transition.room_target = rm_menu
+	var transition = instance_create_layer(x,y,"cursor",obj_transition)
+	transition.room_target = rm_menu
 }

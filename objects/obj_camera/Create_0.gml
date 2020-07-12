@@ -1,9 +1,14 @@
 width = camera_get_view_width(view_get_camera(0))
 height = camera_get_view_height(view_get_camera(0))
 
+surf_w = 384
+surf_h = 216
+
+ui_surf = surface_create(surf_w,surf_h)
+
 spd_factor = .1
 
-mouse_factor = .2
+base_mouse_factor = .32
 
 target = obj_player
 
@@ -30,4 +35,4 @@ view_set_camera(0,camera)
 
 zoom_target = zoom
 min_speed_zoom = 3
-max_speed_zoom = 20
+max_speed_zoom = 30//20

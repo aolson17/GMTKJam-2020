@@ -1,7 +1,7 @@
 
 
 
-if point_distance(active_x,active_y, obj_player.x,obj_player.y) > active_range/3{
+if point_distance(active_x,active_y, obj_player.x,obj_player.y) > active_range/4{
 	event_user(0)
 }
 
@@ -20,6 +20,18 @@ if (obj_player.x-generate_range) < (must_generate_l){
 		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
 		repeat(generate_amount){
 			scr_new_monitor(generated_l-cell_size,generated_l,generated_u,generated_d)
+		}
+		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_battery(generated_l-cell_size,generated_l,generated_u,generated_d)
+		}
+		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_battery_block(generated_l-cell_size,generated_l,generated_u,generated_d)
+		}
+		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_spike(generated_l-cell_size,generated_l,generated_u,generated_d)
 		}
 	}
 	
@@ -41,6 +53,18 @@ if (obj_player.x+generate_range) > (must_generate_r){
 		repeat(generate_amount){
 			scr_new_monitor(generated_r,generated_r+cell_size,generated_u,generated_d)
 		}
+		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_battery(generated_r,generated_r+cell_size,generated_u,generated_d)
+		}
+		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_battery_block(generated_r,generated_r+cell_size,generated_u,generated_d)
+		}
+		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		repeat(generate_amount){
+			scr_new_spike(generated_r,generated_r+cell_size,generated_u,generated_d)
+		}
 	}
 }
 
@@ -59,6 +83,18 @@ if (obj_player.y-generate_range) < (must_generate_u){
 		repeat(generate_amount){
 			scr_new_monitor(generated_l,generated_r,generated_u-cell_size,generated_u)
 		}
+		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_battery(generated_l,generated_r,generated_u-cell_size,generated_u)
+		}
+		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_battery_block(generated_l,generated_r,generated_u-cell_size,generated_u)
+		}
+		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_spike(generated_l,generated_r,generated_u-cell_size,generated_u)
+		}
 	}
 }
 
@@ -75,6 +111,18 @@ if (obj_player.y+generate_range) > (must_generate_d){
 		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
 		repeat(generate_amount){
 			scr_new_monitor(generated_l,generated_r,generated_d+cell_size,generated_d)
+		}
+		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_battery(generated_l,generated_r,generated_d+cell_size,generated_d)
+		}
+		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_battery_block(generated_l,generated_r,generated_d+cell_size,generated_d)
+		}
+		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		repeat(generate_amount){
+			scr_new_spike(generated_l,generated_r,generated_d+cell_size,generated_d)
 		}
 	}
 }

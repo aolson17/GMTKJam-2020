@@ -1,6 +1,6 @@
 
 
-draw_set_font(-1)
+/*draw_set_font(-1)
 
 draw_text(10,10,"xsp: "+string(xsp))
 draw_text(10,30,"ysp: "+string(ysp))

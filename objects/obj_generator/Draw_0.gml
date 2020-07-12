@@ -1,4 +1,4 @@
-
+/*
 
 draw_set_color(c_blue)
 draw_rectangle(generated_l,generated_u,generated_r,generated_d,true)

@@ -1,7 +1,7 @@
 
 
-surf_w = 2500
-surf_h = 2000
+surf_w = 2800
+surf_h = 2200
 
 
 texture = spr_platform_texture_2
@@ -20,4 +20,5 @@ surface_y = 0
 
 update_surf = true
 
-
+update_time = 60
+alarm[0] = update_time

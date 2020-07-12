@@ -4,10 +4,48 @@
 generate_range = 600
 
 
-
-terrain_per_square_pixel = .00001
-
-monitor_per_square_pixel = .00001
+switch(room){
+	case (Level_1):
+	terrain_per_square_pixel = .00001
+	monitor_per_square_pixel = .00001
+	battery_per_square_pixel = .00001
+	battery_block_per_square_pixel = .000008
+	spike_per_square_pixel = 0
+	target_batteries = 30
+	break
+	case (Level_2):
+	terrain_per_square_pixel = .000008
+	monitor_per_square_pixel = .00001
+	battery_per_square_pixel = .00001
+	battery_block_per_square_pixel = .000005
+	spike_per_square_pixel = .000004
+	target_batteries = 40
+	break
+	case (Level_3):
+	terrain_per_square_pixel = .00002
+	monitor_per_square_pixel = .000015
+	battery_per_square_pixel = .00001
+	battery_block_per_square_pixel = .000008
+	spike_per_square_pixel = .000005
+	target_batteries = 40
+	break
+	case (Level_4):
+	terrain_per_square_pixel = .00001
+	monitor_per_square_pixel = .00001
+	battery_per_square_pixel = .00001
+	battery_block_per_square_pixel = .000005
+	spike_per_square_pixel = .00001
+	target_batteries = 40
+	break
+	case (Level_5):
+	terrain_per_square_pixel = .00001
+	monitor_per_square_pixel = .00001
+	battery_per_square_pixel = .00001
+	battery_block_per_square_pixel = .000005
+	spike_per_square_pixel = .000015
+	target_batteries = 60
+	break
+}
 
 generated_l = -50 // How far in each direction has been generated
 generated_r = 50
@@ -21,7 +59,7 @@ must_generate_d = generated_d
 cell_size = 500 // How long to wait before generating in a direction so there is more randomness in placement
 
 
-active_range = 2500
+active_range = 3000
 
 active_x = 0 // Where the center of the active area is
 active_y = 0

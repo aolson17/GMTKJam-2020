@@ -6,6 +6,12 @@ on_ground = place_meeting(x+lengthdir_x(1,global.grav_dir),y+lengthdir_y(1,globa
 
 if state = states.fall{
 	
+	if shoot_key_pressed{
+		if !audio_is_playing(tail_sound){
+			tail_sound = audio_play_sound(snd_tail_charge,0,0)
+			audio_sound_gain(tail_sound,global.master_volume*global.sound_volume,0)
+		}
+	}
 	if shoot_key_down{
 		aim_dir = point_direction(x,y,mouse_x,mouse_y)
 		obj_grapple.x = x+lengthdir_x(grapple_length_min,aim_dir)
@@ -15,6 +21,8 @@ if state = states.fall{
 	if shoot_key_released{
 		if grapple_length < .3*grapple_length_max{
 			state = states.shoot
+			
+			scr_play_sound(snd_tail_shot)
 		
 			aim_dir = point_direction(x,y,mouse_x,mouse_y)
 		
@@ -71,7 +79,11 @@ if state = states.fall{
 	
 	
 	if retract_key{
-		grapple_length--//*=.9//
+		if !audio_is_playing(tail_sound){
+			tail_sound = audio_play_sound(snd_tail_retract,0,0)
+			audio_sound_gain(tail_sound,global.master_volume*global.sound_volume,0)
+		}
+		grapple_length-=grapple_length_speed//*=.9//
 		asp *= 1.02
 	}
 	if grapple_length < grapple_length_min{
@@ -79,8 +91,12 @@ if state = states.fall{
 		asp *= .8
 	}
 	
-	if extend_key{
-		grapple_length++//*=1.1
+	if extend_key && !retract_key{
+		if !audio_is_playing(tail_sound){
+			tail_sound = audio_play_sound(snd_tail_extend,0,0)
+			audio_sound_gain(tail_sound,global.master_volume*global.sound_volume,0)
+		}
+		grapple_length+=grapple_length_speed//*=1.1
 		asp *= .97
 	}
 	if grapple_length > grapple_length_max{
@@ -117,6 +133,10 @@ if state = states.fall{
 		if place_meeting(x,y,par_solid){
 			x = prev_x
 			y = prev_y
+			if !audio_is_playing(collision_sound){
+				collision_sound = audio_play_sound(snd_collision,0,0)
+				audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+			}
 			grapple_length = point_distance(x,y,obj_grapple.x,obj_grapple.y)+1
 			if grapple_length > grapple_length_max{
 				grapple_length = grapple_length_max
@@ -124,7 +144,11 @@ if state = states.fall{
 		}
 	}
 	
-	if release_key{
+	if shoot_key_released{
+		if audio_exists(tail_sound){
+			audio_stop_sound(tail_sound)
+		}
+		scr_play_sound(snd_tail_detach)
 		state = states.fall
 		
 		var spd = asp * (2*pi*grapple_length)/360
@@ -144,19 +168,31 @@ if state = states.fall{
 		show_debug_message("-!Grappled and in wall!- "+string(random(10)))
 		grapple_dir -= asp/2
 		asp = -asp*.8
+		if !audio_is_playing(collision_sound){
+			collision_sound = audio_play_sound(snd_collision,0,0)
+			audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+		}
 	}
 	
 }else if state = states.slack{
 	
 	if retract_key{
-		grapple_length--//*=.9//
+		if !audio_is_playing(tail_sound){
+			tail_sound = audio_play_sound(snd_tail_retract,0,0)
+			audio_sound_gain(tail_sound,global.master_volume*global.sound_volume,0)
+		}
+		grapple_length-=grapple_length_speed//*=.9//
 	}
 	if grapple_length < grapple_length_min{
 		grapple_length = grapple_length_min
 	}
 	
-	if extend_key{
-		grapple_length++//*=1.1//
+	if extend_key && !retract_key{
+		if !audio_is_playing(tail_sound){
+			tail_sound = audio_play_sound(snd_tail_extend,0,0)
+			audio_sound_gain(tail_sound,global.master_volume*global.sound_volume,0)
+		}
+		grapple_length+=grapple_length_speed//*=1.1//
 	}
 	if grapple_length > grapple_length_max{
 		grapple_length = grapple_length_max
@@ -190,11 +226,41 @@ if state = states.fall{
 		}
 	}
 	
-	if release_key{
+	if shoot_key_released{
+		if audio_exists(tail_sound){
+			audio_stop_sound(tail_sound)
+		}
+		scr_play_sound(snd_tail_detach)
 		state = states.fall
 	}
+}else if state = states.dead{
+	xsp = 0
+	ysp = 0
+	
+	if dead = false{
+		dead = true
+		
+		var sound = audio_play_sound(snd_death_jingle,0,0)
+		audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
+		
+		instance_create_layer(x,y,"Instances",obj_flash)
+		instance_create_layer(x,y,"Instances",obj_part_1)
+		instance_create_layer(x,y,"Instances",obj_part_2)
+		instance_create_layer(x,y,"Instances",obj_part_3)
+		instance_create_layer(x,y,"Instances",obj_part_4)
+		eyes = instance_create_layer(x,y,"Cursor",obj_part_eyes)
+		eyes.image_xscale = facing
+		instance_create_layer(x,y,"Instances",obj_part_5)
+		
+		alarm[0] = 170
+	}
+	
 }
 
 
-
+if hp <= 0{
+	state = states.dead
+	dead_x = x
+	dead_y = y
+}
 

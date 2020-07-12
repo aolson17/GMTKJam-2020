@@ -1,4 +1,6 @@
 
+var collision = false
+
 if place_meeting((x+xsp),(y),par_solid){
 	var limit = abs(xsp)
 	
@@ -10,7 +12,7 @@ if place_meeting((x+xsp),(y),par_solid){
 		x += sign(xsp)*.2
 		limit -= abs(sign(xsp))*.2
 	}
-	
+	collision = true
 	xsp = 0
 	x = round(x)
 }else{
@@ -28,7 +30,7 @@ if place_meeting((x),(y+ysp),par_solid){
 		y += sign(ysp)*.2
 		limit -= abs(sign(ysp))*.2
 	}
-	
+	collision = true
 	y = round(y)
 	ysp = 0
 }else{
@@ -42,5 +44,5 @@ if place_meeting(x,y,par_solid){
 }
 
 
-
+return collision
 

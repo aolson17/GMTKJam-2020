@@ -10,6 +10,7 @@ if obj_player.state = states.shoot{
 			x+=sign(xsp/(abs(xsp)+abs(ysp)))
 			y+=sign(ysp/(abs(xsp)+abs(ysp)))
 		}
+		scr_play_sound(snd_claw_attach)
 		xsp = 0
 		ysp = 0
 		obj_player.state = states.swing
@@ -42,5 +43,7 @@ if obj_player.state = states.shoot{
 	sprite_index = spr_claw_closed
 }
 
-
+if obj_player.state = states.dead{
+	visible = false
+}
 

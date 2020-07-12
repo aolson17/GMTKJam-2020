@@ -14,5 +14,5 @@ shoot_key_released = mouse_check_button_released(mb_left)
 
 release_key = mouse_check_button_pressed(mb_right)
 
-extend_key = keyboard_check(vk_space)//mouse_wheel_up()
-retract_key = keyboard_check(vk_shift)//mouse_wheel_down()
+extend_key = keyboard_check(vk_shift)
+retract_key = keyboard_check(vk_space) || mouse_check_button(mb_right)//mouse_wheel_down()

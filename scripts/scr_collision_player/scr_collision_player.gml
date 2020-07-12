@@ -12,7 +12,11 @@ if state = states.slack && on_ground{
 			x += sign(xsp)*.2
 			limit -= abs(sign(xsp))*.2
 		}
-	
+		
+		if !audio_is_playing(collision_sound){
+			collision_sound = audio_play_sound(snd_collision,0,0)
+			audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+		}
 		xsp = 0
 		x = round(x)
 	}else{
@@ -30,7 +34,11 @@ if state = states.slack && on_ground{
 			y += sign(ysp)*.2
 			limit -= abs(sign(ysp))*.2
 		}
-	
+		
+		if !audio_is_playing(collision_sound){
+			collision_sound = audio_play_sound(snd_collision,0,0)
+			audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+		}
 		y = round(y)
 		ysp = 0
 	}else{
@@ -54,7 +62,11 @@ if state = states.slack && on_ground{
 			x += sign(xsp)*.2
 			limit -= abs(sign(xsp))*.2
 		}
-	
+		
+		if !audio_is_playing(collision_sound){
+			collision_sound = audio_play_sound(snd_collision,0,0)
+			audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+		}
 		xsp = 0
 		x = round(x)
 	}else{
@@ -72,7 +84,11 @@ if state = states.slack && on_ground{
 			y += sign(ysp)*.2
 			limit -= abs(sign(ysp))*.2
 		}
-	
+		
+		if !audio_is_playing(collision_sound){
+			collision_sound = audio_play_sound(snd_collision,0,0)
+			audio_sound_gain(collision_sound,global.master_volume*global.sound_volume,0)
+		}
 		y = round(y)
 		ysp = 0
 	}else{
