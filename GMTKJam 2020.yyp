@@ -903,6 +903,14 @@
             }
         },
         {
+            "Key": "88c2b983-b6b3-41c3-b8ec-40e75435d191",
+            "Value": {
+                "id": "46fe253e-5053-482c-9053-df5e79bdc15f",
+                "resourcePath": "objects\\obj_cutscene_4\\obj_cutscene_4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "899cc369-f60f-4be7-a16f-ebcb22b49e67",
             "Value": {
                 "id": "31199654-347d-49b6-9154-0582ded20a1a",
@@ -972,6 +980,14 @@
                 "id": "2075f27b-e168-4661-9c71-d0422dd8e088",
                 "resourcePath": "views\\8d5e6919-22de-4838-8756-b4c11a0dd988.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8da3df2e-28c0-4e06-8d3d-26d04c52597c",
+            "Value": {
+                "id": "4a27ad3d-8343-4d69-aacd-60a5154dfafb",
+                "resourcePath": "objects\\obj_cutscene_text_4\\obj_cutscene_text_4.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1116,6 +1132,14 @@
                 "id": "6a817a33-434c-45f4-8974-c498f49a35f3",
                 "resourcePath": "sprites\\spr_atomic_purple_eyes_electric\\spr_atomic_purple_eyes_electric.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a0b67ace-d52e-4c5b-ba20-f6ca7300035d",
+            "Value": {
+                "id": "7ceaffe9-13fd-4ec2-9557-e83d7a046c20",
+                "resourcePath": "rooms\\Cutscene_4\\Cutscene_4.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -1916,6 +1940,14 @@
                 "id": "06fb1b77-9e4e-43fc-9d36-955a5b9eed56",
                 "resourcePath": "sounds\\snd_tail_retract\\snd_tail_retract.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "fc67e12a-c503-4503-a47d-f8334371a6f2",
+            "Value": {
+                "id": "35819cfa-20b4-4f49-9a5c-d2a1c238524d",
+                "resourcePath": "sprites\\spr_cutscene_4\\spr_cutscene_4.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

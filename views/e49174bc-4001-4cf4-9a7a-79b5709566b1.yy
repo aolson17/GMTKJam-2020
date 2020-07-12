@@ -7,7 +7,8 @@
         "6f1adcc4-b7e6-483e-b9ba-ef0a298f638c",
         "48dff24b-b65e-4a25-b253-a9f66af25f21",
         "0065b732-bd89-4692-9ce2-3d17fd1ecdf8",
-        "925dc469-5d96-48f7-800a-fea128e18e4c"
+        "925dc469-5d96-48f7-800a-fea128e18e4c",
+        "fc67e12a-c503-4503-a47d-f8334371a6f2"
     ],
     "filterType": "GMSprite",
     "folderName": "Cutscene",
