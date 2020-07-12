@@ -479,6 +479,14 @@
             }
         },
         {
+            "Key": "48dff24b-b65e-4a25-b253-a9f66af25f21",
+            "Value": {
+                "id": "ae6338d7-ad6e-41fc-9e00-c1c010af1c72",
+                "resourcePath": "sprites\\spr_cutscene_1\\spr_cutscene_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4d4c30ba-1c95-4e98-ac10-db1aae5aac76",
             "Value": {
                 "id": "c75eb643-3fbf-430a-92f4-fbf8393007ce",
@@ -618,8 +626,16 @@
             "Key": "6abba8b4-7fb1-4b69-ad01-e925e824a866",
             "Value": {
                 "id": "837266be-7eee-4452-a773-ce8e763f0739",
-                "resourcePath": "objects\\obj_cutscene\\obj_cutscene.yy",
+                "resourcePath": "objects\\obj_cutscene_1\\obj_cutscene_1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6f1adcc4-b7e6-483e-b9ba-ef0a298f638c",
+            "Value": {
+                "id": "84abfc20-664c-42a7-9e7e-043af9659ed9",
+                "resourcePath": "sprites\\spr_slide_6\\spr_slide_6.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -787,14 +803,6 @@
             "Value": {
                 "id": "09643cc7-2a97-4cbc-b689-713a197477bd",
                 "resourcePath": "sprites\\spr_eyes_blink_2\\spr_eyes_blink_2.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "8fb5c4e0-edaf-4db8-b914-3e0ebf9142d3",
-            "Value": {
-                "id": "11ab6b3b-182c-46b1-959e-605131c2c16c",
-                "resourcePath": "sprites\\spr_story_1\\spr_story_1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1234,7 +1242,7 @@
             "Key": "ca482180-f393-4296-98e9-27db573d39cd",
             "Value": {
                 "id": "bd890158-9ecc-4c08-98a1-8fbe823cb5e7",
-                "resourcePath": "objects\\obj_cutscene_text\\obj_cutscene_text.yy",
+                "resourcePath": "objects\\obj_cutscene_text_1\\obj_cutscene_text_1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1444,6 +1452,14 @@
                 "id": "b3df6195-cf6b-4f1e-a37b-e3a7973e193d",
                 "resourcePath": "objects\\obj_button_restart\\obj_button_restart.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e49174bc-4001-4cf4-9a7a-79b5709566b1",
+            "Value": {
+                "id": "c8673fc1-14c2-41ad-ae40-cc22eb0b82b4",
+                "resourcePath": "views\\e49174bc-4001-4cf4-9a7a-79b5709566b1.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
