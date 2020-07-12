@@ -1,5 +1,9 @@
 
-mouse_factor = base_mouse_factor*(zoom+.5)
+if instance_number(obj_player)>0 && obj_player.state = states.shoot{
+	mouse_factor = 0+base_mouse_factor*(zoom+.5)
+}else{
+	mouse_factor = base_mouse_factor*(zoom+.5)
+}
 
 if instance_number(target)>0{
 	if target = noone{ // TODO change when necessary

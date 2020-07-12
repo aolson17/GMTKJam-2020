@@ -10,7 +10,9 @@
         "5b8ccc16-4c49-48be-9f07-2c7ebcc73f2d",
         "c9cf9917-249e-4111-b859-9f08125df04d",
         "a936cc65-1dfc-419a-8c54-e29a57ed7759",
-        "fd078eea-e38a-4d77-ab0b-85d5c37f7e00"
+        "fd078eea-e38a-4d77-ab0b-85d5c37f7e00",
+        "8f3b8c6f-e997-49ba-b90a-c2443c909180",
+        "01b0c7ce-2ee8-408f-b42b-1bef4eb2cea7"
     ],
     "filterType": "GMObject",
     "folderName": "Parts",

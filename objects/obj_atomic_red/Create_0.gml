@@ -16,12 +16,12 @@ rsp = random_range(-.2,.2)
 
 eye_sprite = spr_atomic_red_eyes
 
-anger_range = 200
+anger_range = 150
 
 
 
 
-angry_frames = 90
+angry_frames = 110
 
 can_damage = true
 damage_cooldown = 30

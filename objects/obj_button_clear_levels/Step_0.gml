@@ -17,6 +17,14 @@ if point_in_rectangle(mouse_x,mouse_y,bbox_left,bbox_top,bbox_right,bbox_bottom)
 	
 	if mouse_check_button_released(mb_left){
 		global.levels_unlocked = 0
+		ini_open("data.ini")
+		ini_write_real("Data","level_1_time",9999)
+		ini_write_real("Data","level_2_time",9999)
+		ini_write_real("Data","level_3_time",9999)
+		ini_write_real("Data","level_4_time",9999)
+		ini_write_real("Data","level_5_time",9999)
+		ini_write_real("Data","level_6_score",0)
+		ini_close()
 	}
 }else{
 	image_index = 0

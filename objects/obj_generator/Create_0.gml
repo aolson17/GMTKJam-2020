@@ -11,6 +11,7 @@ switch(room){
 	battery_per_square_pixel = .00001
 	battery_block_per_square_pixel = .000008
 	spike_per_square_pixel = 0
+	red_per_square_pixel = 0
 	target_batteries = 30
 	break
 	case (Level_2):
@@ -19,15 +20,17 @@ switch(room){
 	battery_per_square_pixel = .00001
 	battery_block_per_square_pixel = .000005
 	spike_per_square_pixel = .000004
+	red_per_square_pixel = 0
 	target_batteries = 40
 	break
 	case (Level_3):
 	terrain_per_square_pixel = .00002
-	monitor_per_square_pixel = .000015
-	battery_per_square_pixel = .00001
-	battery_block_per_square_pixel = .000008
+	monitor_per_square_pixel = .00001
+	battery_per_square_pixel = .000002
+	battery_block_per_square_pixel = .000002
 	spike_per_square_pixel = .000005
-	target_batteries = 40
+	red_per_square_pixel = .00001
+	target_batteries = 25
 	break
 	case (Level_4):
 	terrain_per_square_pixel = .00001
@@ -35,6 +38,7 @@ switch(room){
 	battery_per_square_pixel = .00001
 	battery_block_per_square_pixel = .000005
 	spike_per_square_pixel = .00001
+	red_per_square_pixel = .000005
 	target_batteries = 40
 	break
 	case (Level_5):
@@ -43,6 +47,7 @@ switch(room){
 	battery_per_square_pixel = .00001
 	battery_block_per_square_pixel = .000005
 	spike_per_square_pixel = .000015
+	red_per_square_pixel = .000005
 	target_batteries = 60
 	break
 }

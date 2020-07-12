@@ -4,6 +4,13 @@
 if instance_number(obj_generator)>0{
 	if obj_player.batteries >= obj_generator.target_batteries{
 		global.won = true
+		
+		if instance_number(obj_timer) > 0{
+			with(obj_timer){
+				event_user(0)
+			}
+		}
+		
 		switch(room){
 			case (Level_1):
 				if global.levels_unlocked < 1{

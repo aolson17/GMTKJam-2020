@@ -13,29 +13,37 @@ if (obj_player.x-generate_range) < (must_generate_l){
 	while abs(must_generate_l - generated_l) > cell_size{ // Room to generate
 		generated_l -= cell_size
 		
-		var generate_amount = terrain_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_factor = ((cell_size*abs(generated_d-generated_u)))
+		var x1 = generated_l-cell_size
+		var x2 = generated_l
+		var y1 = generated_u
+		var y2 = generated_d
+		
+		var generate_amount = terrain_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_terrain(generated_l-cell_size,generated_l,generated_u,generated_d)
+			scr_new_terrain(x1,x2,y1,y2)
 		}
-		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = monitor_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_monitor(generated_l-cell_size,generated_l,generated_u,generated_d)
+			scr_new_monitor(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = battery_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery(generated_l-cell_size,generated_l,generated_u,generated_d)
+			scr_new_battery(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = battery_block_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery_block(generated_l-cell_size,generated_l,generated_u,generated_d)
+			scr_new_battery_block(x1,x2,y1,y2)
 		}
-		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = spike_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_spike(generated_l-cell_size,generated_l,generated_u,generated_d)
+			scr_new_spike(x1,x2,y1,y2)
+		}
+		var generate_amount = red_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
 	}
-	
-	
 }
 
 if (obj_player.x+generate_range) > (must_generate_r){
@@ -45,25 +53,35 @@ if (obj_player.x+generate_range) > (must_generate_r){
 	while abs(must_generate_r - generated_r) > cell_size{ // Room to generate
 		generated_r += cell_size
 		
-		var generate_amount = terrain_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_factor = ((cell_size*abs(generated_d-generated_u)))
+		var x1 = generated_r
+		var x2 = generated_r+cell_size
+		var y1 = generated_u
+		var y2 = generated_d
+		
+		var generate_amount = terrain_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_terrain(generated_r,generated_r+cell_size,generated_u,generated_d)
+			scr_new_terrain(x1,x2,y1,y2)
 		}
-		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = monitor_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_monitor(generated_r,generated_r+cell_size,generated_u,generated_d)
+			scr_new_monitor(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = battery_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery(generated_r,generated_r+cell_size,generated_u,generated_d)
+			scr_new_battery(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = battery_block_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery_block(generated_r,generated_r+cell_size,generated_u,generated_d)
+			scr_new_battery_block(x1,x2,y1,y2)
 		}
-		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_d-generated_u)))
+		var generate_amount = spike_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_spike(generated_r,generated_r+cell_size,generated_u,generated_d)
+			scr_new_spike(x1,x2,y1,y2)
+		}
+		var generate_amount = red_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
 	}
 }
@@ -75,25 +93,35 @@ if (obj_player.y-generate_range) < (must_generate_u){
 	while abs(must_generate_u - generated_u) > cell_size{ // Room to generate
 		generated_u -= cell_size
 		
-		var generate_amount = terrain_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_factor = ((cell_size*abs(generated_l-generated_r)))
+		var x1 = generated_l
+		var x2 = generated_r
+		var y1 = generated_u-cell_size
+		var y2 = generated_u
+		
+		var generate_amount = terrain_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_terrain(generated_l,generated_r,generated_u-cell_size,generated_u)
+			scr_new_terrain(x1,x2,y1,y2)
 		}
-		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = monitor_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_monitor(generated_l,generated_r,generated_u-cell_size,generated_u)
+			scr_new_monitor(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = battery_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery(generated_l,generated_r,generated_u-cell_size,generated_u)
+			scr_new_battery(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = battery_block_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery_block(generated_l,generated_r,generated_u-cell_size,generated_u)
+			scr_new_battery_block(x1,x2,y1,y2)
 		}
-		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = spike_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_spike(generated_l,generated_r,generated_u-cell_size,generated_u)
+			scr_new_spike(x1,x2,y1,y2)
+		}
+		var generate_amount = red_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
 	}
 }
@@ -104,25 +132,35 @@ if (obj_player.y+generate_range) > (must_generate_d){
 	while abs(must_generate_d - generated_d) > cell_size{ // Room to generate
 		generated_d += cell_size
 		
-		var generate_amount = terrain_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_factor = ((cell_size*abs(generated_l-generated_r)))
+		var x1 = generated_l
+		var x2 = generated_r
+		var y1 = generated_d+cell_size
+		var y2 = generated_d
+		
+		var generate_amount = terrain_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_terrain(generated_l,generated_r,generated_d+cell_size,generated_d)
+			scr_new_terrain(x1,x2,y1,y2)
 		}
-		var generate_amount = monitor_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = monitor_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_monitor(generated_l,generated_r,generated_d+cell_size,generated_d)
+			scr_new_monitor(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = battery_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery(generated_l,generated_r,generated_d+cell_size,generated_d)
+			scr_new_battery(x1,x2,y1,y2)
 		}
-		var generate_amount = battery_block_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = battery_block_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_battery_block(generated_l,generated_r,generated_d+cell_size,generated_d)
+			scr_new_battery_block(x1,x2,y1,y2)
 		}
-		var generate_amount = spike_per_square_pixel*((cell_size*abs(generated_l-generated_r)))
+		var generate_amount = spike_per_square_pixel*generate_factor
 		repeat(generate_amount){
-			scr_new_spike(generated_l,generated_r,generated_d+cell_size,generated_d)
+			scr_new_spike(x1,x2,y1,y2)
+		}
+		var generate_amount = red_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
 	}
 }

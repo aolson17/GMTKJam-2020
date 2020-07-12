@@ -18,7 +18,12 @@ if room != rm_win{
 	}else{
 		scr_draw_outline(2,42,"You Need "+string(obj_generator.target_batteries),c_white,c_black,1)
 	}
-
+	
+	draw_set_halign(fa_right)
+	if instance_number(obj_timer){
+		scr_draw_outline(200,5,string(obj_timer.timer),c_white,c_black,1)
+	}
+	draw_set_halign(fa_left)
 
 	//draw_text(15+sprite_get_width(spr_battery_icon),32,)
 
@@ -58,5 +63,11 @@ if room != rm_win{
 	surface_reset_target()
 
 	draw_surface_ext(ui_surf,0,0,3,3,0,c_white,1)
+}else{
+	draw_set_halign(fa_right)
+	if instance_number(obj_timer){
+		scr_draw_outline(200,5,string(obj_timer.height),c_white,c_black,1)
+	}
+	draw_set_halign(fa_left)
 }
 

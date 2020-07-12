@@ -39,8 +39,8 @@ image_angle += rsp
 
 
 if scr_collision(){
-	xsp *= -1
-	ysp *= -1
+	xsp = choose(-.1,-.2,.1,.2)
+	ysp = choose(-.1,-.2,.1,.2)
 }
 
 if distance_to_object(obj_grapple) < 3{
@@ -68,9 +68,12 @@ if distance_to_object(obj_grapple) < 3{
 				for(var i = 0; i < 5; i++){
 					instance_create_layer(x+lengthdir_x(dis*(i+2),dir),y+lengthdir_y(dis*(i+2),dir),layer,obj_flash_2)
 					instance_create_layer(x+lengthdir_x(dis*(i+2),dir),y+lengthdir_y(dis*(i+2),dir),layer,obj_battery)
-					
-					
 				}
+				instance_create_layer(x,y,layer,obj_part_red)
+				instance_create_layer(x,y,layer,obj_part_red)
+				instance_create_layer(x,y,layer,obj_part_red)
+				instance_create_layer(x,y,layer,obj_part_red)
+				instance_create_layer(x,y,layer,obj_part_red_eyes)
 				
 				
 			}

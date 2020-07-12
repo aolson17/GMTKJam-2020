@@ -18,7 +18,7 @@ if global.levels_unlocked > 4{
 	
 		if mouse_check_button_released(mb_left){
 			var transition = instance_create_layer(x,y,"Cursor",obj_transition)
-			transition.room_target = rm_win
+			transition.room_target = Cutscene_end
 		}
 	}else{
 		image_index = 0

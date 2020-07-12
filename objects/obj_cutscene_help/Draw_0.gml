@@ -10,4 +10,5 @@ var text_width = 250
 draw_text_ext(x,y,text_str,12,text_width)
 
 
+draw_set_valign(fa_top)
 
