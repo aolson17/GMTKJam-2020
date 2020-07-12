@@ -234,6 +234,7 @@ if state = states.fall{
 		state = states.fall
 	}
 }else if state = states.dead{
+	obj_music.music_to_play = "none"
 	xsp = 0
 	ysp = 0
 	

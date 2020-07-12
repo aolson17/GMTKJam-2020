@@ -1,4 +1,4 @@
-/// @description Teleport to mouse
+/// @description Teleport to mouse DISABLED
 
 /*
 x = mouse_x

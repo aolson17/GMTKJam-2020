@@ -43,17 +43,17 @@ switch(room){
 		spike_per_square_pixel = .00001
 		red_per_square_pixel = .000003
 		purple_per_square_pixel = .000007
-		target_batteries = 40
+		target_batteries = 45
 	break
 	case (Level_5):
 		terrain_per_square_pixel = .00001
 		monitor_per_square_pixel = .00001
 		battery_per_square_pixel = .00001
-		battery_block_per_square_pixel = .000005
-		spike_per_square_pixel = .00001
+		battery_block_per_square_pixel = .000004
+		spike_per_square_pixel = .000005
 		red_per_square_pixel = .000003
 		purple_per_square_pixel = .000003
-		target_batteries = 60
+		target_batteries = 80
 	break
 }
 
