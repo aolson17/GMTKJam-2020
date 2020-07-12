@@ -43,6 +43,10 @@ if (obj_player.x-generate_range) < (must_generate_l){
 		repeat(generate_amount){
 			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
+		var generate_amount = purple_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_purple)
+		}
 	}
 }
 
@@ -82,6 +86,10 @@ if (obj_player.x+generate_range) > (must_generate_r){
 		var generate_amount = red_per_square_pixel*generate_factor
 		repeat(generate_amount){
 			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
+		}
+		var generate_amount = purple_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_purple)
 		}
 	}
 }
@@ -123,6 +131,10 @@ if (obj_player.y-generate_range) < (must_generate_u){
 		repeat(generate_amount){
 			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
 		}
+		var generate_amount = purple_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_purple)
+		}
 	}
 }
 
@@ -161,6 +173,10 @@ if (obj_player.y+generate_range) > (must_generate_d){
 		var generate_amount = red_per_square_pixel*generate_factor
 		repeat(generate_amount){
 			scr_new_obj(x1,x2,y1,y2,obj_atomic_red)
+		}
+		var generate_amount = purple_per_square_pixel*generate_factor
+		repeat(generate_amount){
+			scr_new_obj(x1,x2,y1,y2,obj_atomic_purple)
 		}
 	}
 }

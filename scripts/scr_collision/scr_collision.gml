@@ -14,7 +14,7 @@ if place_meeting((x+xsp),(y),par_solid){
 	}
 	collision = true
 	xsp = 0
-	x = round(x)
+	//x = round(x)
 }else{
 	x += xsp
 }
@@ -31,7 +31,7 @@ if place_meeting((x),(y+ysp),par_solid){
 		limit -= abs(sign(ysp))*.2
 	}
 	collision = true
-	y = round(y)
+	//y = round(y)
 	ysp = 0
 }else{
 	y += ysp

@@ -54,8 +54,10 @@ if distance_to_object(obj_grapple) < 3{
 	}else{
 		if obj_player.state != states.dead{
 			obj_player.state = states.fall{
-				obj_player.xsp = (x-obj_player.x)*.1
-				obj_player.ysp = (y-obj_player.y)*.1
+				//obj_player.xsp = (x-obj_player.x)*.1
+				//obj_player.ysp = (y-obj_player.y)*.1
+				obj_player.xsp = lengthdir_x(14,point_direction(obj_player.x,obj_player.y,x,y))
+				obj_player.ysp = lengthdir_y(14,point_direction(obj_player.x,obj_player.y,x,y))
 				instance_destroy()
 				scr_play_sound(snd_enemy_death)
 				var flash = instance_create_layer(x,y,layer,obj_flash_2)
@@ -80,4 +82,5 @@ if distance_to_object(obj_grapple) < 3{
 		}
 	}
 }
+
 

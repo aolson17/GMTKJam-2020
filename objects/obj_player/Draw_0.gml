@@ -35,9 +35,11 @@ if state != states.dead{
 			face_angle = point_direction(0,0,xsp,ysp)
 		}
 	}
-
-	if sign(angle_difference(face_angle,global.grav_dir)) != 0{
-		facing = sign(angle_difference(face_angle,global.grav_dir))
+	
+	if state != states.slack{
+		if sign(angle_difference(face_angle,global.grav_dir)) != 0{
+			facing = sign(angle_difference(face_angle,global.grav_dir))
+		}
 	}
 
 	var eye_sprite = spr_eyes_normal
@@ -53,6 +55,9 @@ if state != states.dead{
 	if hurt > 0{
 		hurt--
 		eye_sprite = spr_eyes_shocked
+	}
+	if state = states.shoot{
+		eye_sprite = spr_eyes_coil_1
 	}
 
 	draw_sprite_ext(eye_sprite,0,x,y,facing,1,global.grav_dir+90,c_white,1)

@@ -5,16 +5,6 @@
     "name": "obj_part_red",
     "eventList": [
         {
-            "id": "8c88c815-2b3e-47a5-bfc9-4d7595a25014",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "8f3b8c6f-e997-49ba-b90a-c2443c909180"
-        },
-        {
             "id": "d7c9f86f-8f64-442d-b24d-1f4260284c3e",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -37,7 +27,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "cd208fc2-c6b0-4753-92ee-a59750348da8",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

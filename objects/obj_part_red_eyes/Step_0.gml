@@ -14,4 +14,5 @@ if !place_meeting(x+lengthdir_x(1,global.grav_dir),y+lengthdir_y(1,global.grav_d
 	ysp *= .9
 }
 
-scr_collision()
+x += xsp
+y += ysp

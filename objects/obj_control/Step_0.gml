@@ -3,6 +3,10 @@
 
 if instance_number(obj_generator)>0{
 	if obj_player.batteries >= obj_generator.target_batteries{
+		
+		if !global.won{
+			scr_play_sound(snd_level_clear)
+		}
 		global.won = true
 		
 		if instance_number(obj_timer) > 0{

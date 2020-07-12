@@ -1,5 +1,5 @@
 {
-    "id": "9dbeeb1f-f105-42b3-a067-06f271bd5f4d",
+    "id": "a3efa953-d186-4ce9-8062-29ed9f38e01a",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_GMTK_jingle",

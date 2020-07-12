@@ -14,14 +14,14 @@ if room != rm_win{
 
 	if global.won{
 		scr_draw_outline(50,5," Complete!",c_white,c_black,1)
-		scr_draw_outline(60,25,"Press E to advance!",c_white,c_black,1)
+		scr_draw_outline(60,20,"Press E to advance",c_white,c_black,1)
 	}else{
 		scr_draw_outline(2,42,"You Need "+string(obj_generator.target_batteries),c_white,c_black,1)
 	}
 	
 	draw_set_halign(fa_right)
 	if instance_number(obj_timer){
-		scr_draw_outline(200,5,string(obj_timer.timer),c_white,c_black,1)
+		scr_draw_outline(200,5,"Time: "+string(obj_timer.timer),c_white,c_black,1)
 	}
 	draw_set_halign(fa_left)
 
@@ -58,16 +58,14 @@ if room != rm_win{
 	draw_arrow(arrow_x-lengthdir_x(arrow_length,global.grav_dir),arrow_y-1-lengthdir_y(arrow_length,global.grav_dir),arrow_x+lengthdir_x(arrow_length,global.grav_dir),arrow_y-1+lengthdir_y(arrow_length,global.grav_dir),arrow_size)
 	draw_set_color(c_white)
 	draw_arrow(arrow_x-lengthdir_x(arrow_length,global.grav_dir),arrow_y-lengthdir_y(arrow_length,global.grav_dir),arrow_x+lengthdir_x(arrow_length,global.grav_dir),arrow_y+lengthdir_y(arrow_length,global.grav_dir),arrow_size)
-
+	
 
 	surface_reset_target()
 
 	draw_surface_ext(ui_surf,0,0,3,3,0,c_white,1)
 }else{
-	draw_set_halign(fa_right)
 	if instance_number(obj_timer){
-		scr_draw_outline(200,5,string(obj_timer.height),c_white,c_black,1)
+		scr_draw_outline_scaled(200,5,"Height: "+string(obj_timer.height),c_white,c_black,2,2)
 	}
-	draw_set_halign(fa_left)
 }
 
